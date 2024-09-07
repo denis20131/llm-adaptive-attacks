@@ -64,7 +64,7 @@ def main():
         best_logprobs, best_advs, logprob_dict = [], [], {} #ля хранения лучших логарифмических вероятностей, лучших атак
 
         for it in range(1, n_iterations + 1):
-            output = targetLM.get_response([best_msg], max_n_tokens=target_max_n_tokens, temperature=temperature)[0]
+            output = targetLM.get_response([best_msg], max_n_tokens=target_max_n_tokens, temperature=0)[0]
             logprob_dict = output['logprobs'][0]
             logprob = extract_logprob(logprob_dict, target_token) #извлекаем лог проб целевого токена
             # print(logprob)
