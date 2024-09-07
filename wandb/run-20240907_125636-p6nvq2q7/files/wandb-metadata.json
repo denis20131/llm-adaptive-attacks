@@ -1,0 +1,82 @@
+{
+    "os": "Linux-6.1.0-18-cloud-amd64-x86_64-with-glibc2.36",
+    "python": "3.11.2",
+    "heartbeatAt": "2024-09-07T09:56:36.601523",
+    "startedAt": "2024-09-07T09:56:36.036880",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "/home/deniskh/jailbreak/llm-adaptive-attacks/main.py",
+    "codePathLocal": "main.py",
+    "codePath": "main.py",
+    "host": "khaibullin-gpu",
+    "username": "deniskh",
+    "executable": "/home/deniskh/jailbreak/jail/bin/python",
+    "cpu_count": 8,
+    "cpu_count_logical": 8,
+    "cpu_freq": {
+        "current": 1995.312,
+        "min": 0.0,
+        "max": 0.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 1995.312,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 1995.312,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 1995.312,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 1995.312,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 1995.312,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 1995.312,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 1995.312,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 1995.312,
+            "min": 0.0,
+            "max": 0.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 503.7978935241699,
+            "used": 181.04012298583984
+        }
+    },
+    "gpu": "NVIDIA A100 80GB PCIe",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA A100 80GB PCIe",
+            "memory_total": 85899345920
+        }
+    ],
+    "memory": {
+        "total": 62.81186294555664
+    }
+}

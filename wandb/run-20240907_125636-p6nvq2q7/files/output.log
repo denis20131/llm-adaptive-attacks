@@ -1,0 +1,63 @@
+
+[1, 10324, 7383, 21563, 20943, 8131, 13584, 5464, 25580, 3054, 23817, 22010, 11297, 4525, 14136, 13947, 533, 30717, 31536, 3576, 5913, 28023, 29912, 10437, 5621, 15974, 768, 14463, 11372, 28249, 25567, 4533, 3527, 19008, 18607, 30150, 29144, 10976, 1042, 30992, 6011, 10957, 29876]
+Traceback (most recent call last):
+  File "/home/deniskh/jailbreak/llm-adaptive-attacks/main.py", line 136, in <module>
+    main()
+  File "/home/deniskh/jailbreak/llm-adaptive-attacks/main.py", line 126, in main
+    response=targetLM.get_response([best_msg], max_n_tokens=target_max_n_tokens, temperature=1)[0]['text']
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/deniskh/jailbreak/llm-adaptive-attacks/conversers.py", line 56, in get_response
+    outputs = self.model.generate(full_prompts,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/deniskh/jailbreak/llm-adaptive-attacks/language_models.py", line 111, in generate
+    output = self.model.generate(
+             ^^^^^^^^^^^^^^^^^^^^
+  File "/home/deniskh/jailbreak/jail/lib/python3.11/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/deniskh/jailbreak/jail/lib/python3.11/site-packages/transformers/generation/utils.py", line 2024, in generate
+    result = self._sample(
+             ^^^^^^^^^^^^^
+  File "/home/deniskh/jailbreak/jail/lib/python3.11/site-packages/transformers/generation/utils.py", line 2982, in _sample
+    outputs = self(**model_inputs, return_dict=True)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/deniskh/jailbreak/jail/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/deniskh/jailbreak/jail/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/deniskh/jailbreak/jail/lib/python3.11/site-packages/transformers/models/llama/modeling_llama.py", line 1189, in forward
+    outputs = self.model(
+              ^^^^^^^^^^^
+  File "/home/deniskh/jailbreak/jail/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/deniskh/jailbreak/jail/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/deniskh/jailbreak/jail/lib/python3.11/site-packages/transformers/models/llama/modeling_llama.py", line 1001, in forward
+    layer_outputs = decoder_layer(
+                    ^^^^^^^^^^^^^^
+  File "/home/deniskh/jailbreak/jail/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/deniskh/jailbreak/jail/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/deniskh/jailbreak/jail/lib/python3.11/site-packages/transformers/models/llama/modeling_llama.py", line 734, in forward
+    hidden_states, self_attn_weights, present_key_value = self.self_attn(
+                                                          ^^^^^^^^^^^^^^^
+  File "/home/deniskh/jailbreak/jail/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/deniskh/jailbreak/jail/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/deniskh/jailbreak/jail/lib/python3.11/site-packages/transformers/models/llama/modeling_llama.py", line 640, in forward
+    key_states, value_states = past_key_value.update(key_states, value_states, self.layer_idx, cache_kwargs)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/deniskh/jailbreak/jail/lib/python3.11/site-packages/transformers/cache_utils.py", line 383, in update
+    self.key_cache[layer_idx] = torch.cat([self.key_cache[layer_idx], key_states], dim=-2)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
